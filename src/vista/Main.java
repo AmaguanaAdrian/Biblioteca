@@ -15,8 +15,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner es = new Scanner(System.in);
         LibroControlador libroControlador = new LibroControlador();
-        int op1; // Variable para la opción del usuario
-
+        int op1; 
         do {
             System.out.println("BIENVENIDO");
             System.out.println("""
@@ -28,8 +27,7 @@ public class Main {
                                0. Salir""");
 
             op1 = es.nextInt();
-            es.nextLine(); // Consumir la línea pendiente después de nextInt()
-
+            es.nextLine();
             if (op1 == 1) {
                 // Insertar libro
                 System.out.println("Ingrese el título del libro:");
@@ -77,15 +75,13 @@ public class Main {
                 libroControlador.eliminarLibro(isbn);
 
             } else if (op1 == 0) {
-                // Salir
                 System.out.println("Saliendo...");
 
             } else {
-                // Opción no válida
                 System.out.println("Opción no válida, por favor elija una opción entre 0 y 4.");
             }
         } while (op1 != 0);
 
-        es.close(); // Cerrando el escáner
+        es.close();
     }
 }

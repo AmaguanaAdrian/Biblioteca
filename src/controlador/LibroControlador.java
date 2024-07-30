@@ -16,7 +16,7 @@ public class LibroControlador {
     ConexionBDD conexion=new ConexionBDD();
     Connection connection=(Connection)conexion.conectar();
     PreparedStatement ejecutar;
-    ResultSet resultado; // consult.set
+    ResultSet resultado; 
     public void crearLibro(libro l) {
     try {
         String consultaSQL = "INSERT INTO libro(titulo, fechaPublicado, isbn) VALUES (?, ?, ?);";
